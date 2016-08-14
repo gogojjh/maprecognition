@@ -38,5 +38,7 @@ Mat colorConversion(Mat img, HsvType imgtype);
 
 // get the position of destination
 void getPosition(const Point2f p1, const Point2f p2, Point2f &ans); //center, goal, minG
+// get the pose
+float markerPosition(Mat &img, Point2f *pointsIn);
 
 #endif // BASE_H

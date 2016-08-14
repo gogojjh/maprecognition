@@ -11,7 +11,8 @@ SOURCES += \
     src/leddetect.cpp \
     src/base.cpp \
     src/gridfourdetect.cpp \
-    src/markerdetect.cpp
+    src/markerdetect.cpp \
+    src/cameracalibration.cpp
 
 INCLUDEPATH += /usr/local/include/opencv \
 /usr/local/include/opencv2 \
@@ -48,4 +49,5 @@ HEADERS += \
     include/maprecognition/findrect.h \
     include/maprecognition/leddetect.h \
     include/maprecognition/gridfourdetect.h \
-    include/maprecognition/markerdetect.h
+    include/maprecognition/markerdetect.h \
+    include/maprecognition/cameracalibration.h
