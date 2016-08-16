@@ -30,7 +30,6 @@ RotatedRect squareDet(const Mat src, Mat &result, bool &minF)
 {
     //split the channel
     Mat imgSingle = colorConversion(src, BGR_R);
-
     vector<vector<Point> > contours;
     vector<Vec4i> hierarchy;
     float maxContourArea = 0;
@@ -38,7 +37,7 @@ RotatedRect squareDet(const Mat src, Mat &result, bool &minF)
 
     Mat element = getStructuringElement(MORPH_RECT,Size(27,27));
     morphologyEx(imgSingle, imgSingle,MORPH_DILATE,element);
-    imshow("2_img_dilate",imgSingle);
+    //imshow("2_img_dilate",imgSingle);
 
     medianBlur(imgSingle,imgSingle,5);
     element = getStructuringElement(MORPH_RECT,Size(22,22));
@@ -50,7 +49,7 @@ RotatedRect squareDet(const Mat src, Mat &result, bool &minF)
     //imshow("img_single_close",imgSingle);
 
     threshold(imgSingle, imgSingle, Transformer::gridfourdetect_threshold , 255, THRESH_BINARY_INV );
-    imshow("img_single_threshold",imgSingle);
+    //imshow("img_single_threshold",imgSingle);
 
     findContours(imgSingle, contours,hierarchy ,CV_RETR_EXTERNAL, CV_CHAIN_APPROX_SIMPLE);
     drawContours(imgSingle, contours, -1, Scalar(255), 2);

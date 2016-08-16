@@ -29,6 +29,7 @@ Mat image_calibration(Mat image)
     //  information of camera
     Mat intrinsic_matrix = Mat(3,3, CV_64FC1, Scalar::all(0));
     Mat distortion_coeffs = Mat(1,5, CV_64FC1, Scalar::all(0));
+    /*
     double fx = 1074.37169;
     double fy = 1075.04626;
     double cx = 596.130236;
@@ -37,7 +38,16 @@ Mat image_calibration(Mat image)
     double dis2 = 0.2418456;
     double dis3 = 0.0020909;
     double dis4 = -0.000691;
-    double dis5 = 0;
+    double dis5 = 0;*/
+    double fx = 1171.769934078847;
+    double fy = 1171.474272581371;
+    double cx = 640.1820130028314;
+    double cy = 332.1291157480398;
+    double dis1 = -0.3760559148444987;
+    double dis2 = -0.09446994343841564;
+    double dis3 = 0.003616536701715218;
+    double dis4 = -0.002506172495202522;
+    double dis5 = 0.616341515362075;
     intrinsic_matrix.at<double>(0,0) = fx;
     intrinsic_matrix.at<double>(1,1) = fy;
     intrinsic_matrix.at<double>(0,2) = cx;

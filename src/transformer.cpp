@@ -73,12 +73,12 @@ void Transformer::detectApriltag(Point2f &goal, float &distance, bool &find_obje
 void Transformer::detectTwo(Point2f &goal, float &distance, bool &find_object)
 {
     griddetect(img_Origin, goal, distance, find_object, img_Result, maskgrid);
-    if (find_object == false) maskgrid = Mat(img_Origin.size(), 1, Scalar::all(0));
+    //if (find_object == false) maskgrid = Mat(img_Origin.size(), 1, Scalar::all(0));
 }
 
 void Transformer::detectThree(Point2f &goal, float &distance, bool &find_object)
 {
-
+    gridfourdetect(img_Origin, goal, distance, find_object, img_Result, maskgrid);
 }
 
 void Transformer::detectFour(Point2f &goal, float &distance, bool &find_object)

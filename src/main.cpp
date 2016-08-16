@@ -30,7 +30,7 @@ int main()
     namedWindow(OPENCV_WINDOW, 2);
     namedWindow(RESULT_WINDOW, 2);
 
-    int choice = 0;
+    int choice = 3;
     float distance;        /* the distance of object */
     bool find_object;   /* if find object */
     float pose;
@@ -43,10 +43,11 @@ int main()
     while (1)
     {
         //capture >> frame;
-        frame = imread("/home/gogojjh/QT/mapRecognition/data/555.jpg", 1);
+        frame = imread("/home/gogojjh/QT/mapRecognition/data815/270.jpg", 1);
 
         //Mat frame_undistorted = image_calibration(frame);
-
+        //imshow("undistorted", frame_undistorted);
+        //waitKey(0);
         //char saveFileName[50];
         //sprintf(saveFileName, "/home/gogojjh/QT/mapRecognition/image3/zzzzz/%d.jpg", Transformer::number);
         //frame = imread(saveFileName, 1);
@@ -117,7 +118,7 @@ int main()
             }*/
         //}
         imshow(RESULT_WINDOW, trans.gImage(2));
-        //imshow(OPENCV_WINDOW, trans.gImage(0));
+        imshow(OPENCV_WINDOW, trans.gImage(0));
         waitKey(0);
     }
 
