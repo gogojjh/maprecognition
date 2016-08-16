@@ -16,15 +16,15 @@ void setting(Point2f &goal, float &distance, bool &find_object, Mat src)
 
 int main()
 {
-    //VideoCapture capture("/home/gogojjh/QT/mapRecognition/data/Origin253.jpg");
-    //VideoCapture capture(1);
+    VideoCapture capture("/home/gogojjh/QT/mapRecognition/data815/test1.avi");
+    //VideoCapture capture(0);
     /*
     if (!capture.isOpened())
     {
         cout << "failed to open the camera..." << endl;
         return 0;
-    }*/
-
+    }
+    */
     Transformer trans;
 
     namedWindow(OPENCV_WINDOW, 2);
@@ -42,14 +42,14 @@ int main()
 
     while (1)
     {
-        //capture >> frame;
-        frame = imread("/home/gogojjh/QT/mapRecognition/data815/270.jpg", 1);
+        capture >> frame;
+        //frame = imread("/home/gogojjh/QT/mapRecognition/data815/685.jpg", 1);
 
         //Mat frame_undistorted = image_calibration(frame);
         //imshow("undistorted", frame_undistorted);
         //waitKey(0);
         //char saveFileName[50];
-        //sprintf(saveFileName, "/home/gogojjh/QT/mapRecognition/image3/zzzzz/%d.jpg", Transformer::number);
+        //sprintf(saveFileName, "/home/gogojjh/QT/mapRecognition/data815/%d.jpg", Transformer::number*5);
         //frame = imread(saveFileName, 1);
 
         //undistort the images

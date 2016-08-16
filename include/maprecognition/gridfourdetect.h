@@ -10,7 +10,7 @@ void gridfourdetect(const Mat src,
                 Mat &result,
                 Mat &mask);
 RotatedRect squareDet(const Mat src, Mat &result, bool &minF);
-Mat dollDetect(Mat img, RotatedRect box);
+void dollDetect(Mat img, RotatedRect box, Point2f &goal);
 int orbMatching(Mat img_mode,Mat img);
 //int gridDetection_3( Mat img_src,float& angle ); // three area
 
